@@ -1,3 +1,4 @@
+# TODO: standardize UP/SMP modules build and subpackages naming scheme
 Summary:	A Linux network adapter skeleton device driver for Compex RL100ATX-PCI
 Summary(pl):	Sterownik do kart sieciowych na p³ytach Compex RL100ATX-PCI
 Name:		RL100ATX-PCI
@@ -7,6 +8,7 @@ License:	GPL
 Group:		Base/Kernel
 Source0:	ftp://linuxpl.com/pub/%{name}-%{version}.tar.gz
 URL:		http://www.scyld.com/network/drivers.html
+Requires(post,postun):	/sbin/depmod
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,10 +34,10 @@ install *.o $RPM_BUILD_ROOT/lib/modules/%{_kernel_ver}/net
 rm -rf $RPM_BUILD_ROOT
 
 %post   
-/sbin/depmod -a
+/sbin/depmod -a -F /boot/System.map-%{_kernel_ver} %{_kernel_ver}
 
 %postun 
-/sbin/depmod -a
+/sbin/depmod -a -F /boot/System.map-%{_kernel_ver} %{_kernel_ver}
 
 %files
 %defattr(644,root,root,755)
