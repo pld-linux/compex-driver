@@ -29,16 +29,16 @@ Compex RL100ATX-PCI.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/lib/modules/%{_kernel_ver}/net 
+install -d $RPM_BUILD_ROOT/lib/modules/%{_kernel_ver}/net
 install *.o $RPM_BUILD_ROOT/lib/modules/%{_kernel_ver}/net
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   
+%post
 %depmod %{_kernel_ver}
 
-%postun 
+%postun
 %depmod %{_kernel_ver}
 
 %files
