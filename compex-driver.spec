@@ -28,14 +28,15 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/lib/modules/%{_kernel_ver}/net 
 install *.o $RPM_BUILD_ROOT/lib/modules/%{_kernel_ver}/net
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post   
 /sbin/depmod -a
 
 %postun 
 /sbin/depmod -a
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%attr(600,root,root) /lib/modules/%{_kernel_ver}/net/*.o*
+%defattr(644,root,root,755)
+/lib/modules/%{_kernel_ver}/net/*.o*
