@@ -7,6 +7,7 @@ Release:	1
 License:	GPL
 Group:		Base/Kernel
 Source0:	ftp://linuxpl.com/pub/%{name}-%{version}.tar.gz
+# Source0-md5:	2d86a4112fd4be9ec078ea1bfc4378ee
 URL:		http://www.scyld.com/network/drivers.html
 Requires(post,postun):	/sbin/depmod
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
