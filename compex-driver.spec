@@ -38,4 +38,4 @@ install *.o $RPM_BUILD_ROOT/lib/modules/%{_kernel_ver}/net
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(600,root,root) /lib/modules/%{_kernel_ver}/net/*.o
+%attr(600,root,root) /lib/modules/%{_kernel_ver}/net/*.o*
