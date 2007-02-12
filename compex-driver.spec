@@ -1,6 +1,6 @@
 # TODO: standardize UP/SMP modules build and subpackages naming scheme
 Summary:	A Linux network adapter skeleton device driver for Compex RL100ATX-PCI
-Summary(pl):	Sterownik do kart sieciowych na p≥ytach Compex RL100ATX-PCI
+Summary(pl.UTF-8):   Sterownik do kart sieciowych na p≈Çytach Compex RL100ATX-PCI
 Name:		RL100ATX-PCI
 Version:	1.0
 Release:	1
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This chip is used on low-end OEM boards. The Compex RL100ATX-PCI board
 uses a relabeled version of this chip.
 
-%description -l pl
-Sterowniki do tanich kart sieciowych, uøywanych m.in. na p≥ytach
+%description -l pl.UTF-8
+Sterowniki do tanich kart sieciowych, u≈ºywanych m.in. na p≈Çytach
 Compex RL100ATX-PCI.
 
 %prep
