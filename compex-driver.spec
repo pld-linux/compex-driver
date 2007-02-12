@@ -1,6 +1,6 @@
 # TODO: standardize UP/SMP modules build and subpackages naming scheme
 Summary:	A Linux network adapter skeleton device driver for Compex RL100ATX-PCI
-Summary(pl.UTF-8):   Sterownik do kart sieciowych na płytach Compex RL100ATX-PCI
+Summary(pl.UTF-8):	Sterownik do kart sieciowych na płytach Compex RL100ATX-PCI
 Name:		RL100ATX-PCI
 Version:	1.0
 Release:	1
